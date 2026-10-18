@@ -41,5 +41,5 @@ Per `.data/SETUP.txt`, `Remote.php` has a copy in another project that is kept i
 ## Releases and Changelog
 
 - The changelog is `CHANGELOG` (plain text, no `.md`), newest first, in the form `v0.53.0    2024-08-05` followed by `- ` bullets in past tense.
-- Each release bumps the minor version (`v0.N.0`). Usually the code change is one commit, then a separate `Add v0.N.0 to CHANGELOG` commit, with a matching `v0.N.0` git tag (Packagist reads the tags).
-- Work happens on `dev`; `main` is the main branch. The only remote is `public` (`git@github.com:gregdotca/gjclasses.git`), with both `main` and `dev`. Old remote-tracking refs for `origin`, `github`, `gitea`, `prod-gitea`, `backup`, and `test` are leftovers from remotes that no longer exist.
+- Each release bumps the minor version (`v0.N.0`). Usually the code change is one commit, then a separate `Add v0.N.0 to CHANGELOG` commit, with a matching `v0.N.0` git tag (Packagist reads the tags). Tags are GPG-signed annotated tags (`git tag -s -u 87C607E479D40432 -m v0.N.0 v0.N.0`), so GitHub shows them as Verified; commits stay unsigned.
+- Work happens on `dev`; `main` is the main branch. The only remote is `public` (`git@github.com:gregdotca/gjclasses.git`), with both `main` and `dev`.
