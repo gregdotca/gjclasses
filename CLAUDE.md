@@ -34,12 +34,12 @@ The examples need `_includes/config.inc.php` to exist. It's local and git-exclud
 
 ## Local-Only Files
 
-`.git/info/exclude` keeps these out of git: `.data/` (notes, including `SETUP.txt`, which lists the projects that use each class), `.dev/` (scratch test script), `.idea/`, `vendor/`, `_includes/config.inc.php`, `_includes/config.SAMPLE.inc.php`, `TODO.md`, and the three `email_templates/TemplateName.*` files (`.html`, `.txt`, and `.subject`). Any other file added under `email_templates/` isn't excluded.
+`.git/info/exclude` keeps these out of git: `.data/` (notes, including `SETUP.txt`, which lists the projects that use each class), `.dev/` (scratch test script), `.idea/`, `vendor/`, `_includes/config.inc.php`, `_includes/config.SAMPLE.inc.php`, `TODO.md`, `DONE.md`, and the three `email_templates/TemplateName.*` files (`.html`, `.txt`, and `.subject`). Any other file added under `email_templates/` isn't excluded.
 
 Per `.data/SETUP.txt`, `Remote.php` has a copy in another project that is kept in sync by hand. Mention it to Greg when `Remote.php` changes, but don't edit the other project from here.
 
 ## Releases and Changelog
 
-- The changelog is `CHANGELOG` (plain text, no `.md`), newest first, in the form `v0.53.0    2024-08-05` followed by `- ` bullets in past tense.
+- The changelog is `CHANGELOG` (plain text, no `.md`), newest first, in the form `v0.53.0    2024-08-05` followed by `- ` bullets in past tense. Changes that aren't released yet go under an `Unreleased` heading at the top, which becomes the `v0.N.0    YYYY-MM-DD` heading at the next release.
 - Each release bumps the minor version (`v0.N.0`). Usually the code change is one commit, then a separate `Add v0.N.0 to CHANGELOG` commit, with a matching `v0.N.0` git tag (Packagist reads the tags). Tags are GPG-signed annotated tags (`git tag -s -u 87C607E479D40432 -m v0.N.0 v0.N.0`), so GitHub shows them as Verified; commits stay unsigned.
 - Work happens on `dev`; `main` is the main branch. The only remote is `public` (`git@github.com:gregdotca/gjclasses.git`), with both `main` and `dev`.

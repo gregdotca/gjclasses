@@ -1,5 +1,9 @@
 GJClasses CHANGELOG
 ===================
+Unreleased
+- Added DONE.md to the local-only files listed in CLAUDE.md
+- Documented the Unreleased section in CLAUDE.md's changelog conventions
+
 v0.54.0    2026-10-17
 - Updated the copyright notices in LICENSE and README.md to 2018-2026
 - Updated the composer.json homepage to the gregdotca/gjclasses GitHub repo and the author homepage to greg.ca
