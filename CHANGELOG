@@ -1,5 +1,11 @@
 GJClasses CHANGELOG
 ===================
+v0.54.0    2026-10-17
+- Updated the copyright notices in LICENSE and README.md to 2018-2026
+- Updated the composer.json homepage to the gregdotca/gjclasses GitHub repo and the author homepage to greg.ca
+- Removed the outdated Scrutinizer badges from README.md
+- Added CLAUDE.md with guidance for working on the library
+
 v0.53.0    2024-08-05
 - Fixed git tags (maybe?)
 

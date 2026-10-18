@@ -3,13 +3,13 @@
     "type": "library",
     "description": "GJClasses - An ever-expanding collection of classes for personal development projects",
     "keywords": ["classes","tools"],
-    "homepage": "https://github.com/chetcuti/gjclasses",
+    "homepage": "https://github.com/gregdotca/gjclasses",
     "license": "MIT",
     "authors": [
         {
             "name": "Greg Chetcuti",
             "email": "greg@chetcuti.com",
-            "homepage": "http://chetcuti.com",
+            "homepage": "https://greg.ca",
             "role": "Developer"
         }
     ],
