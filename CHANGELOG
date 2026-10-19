@@ -1,8 +1,6 @@
 GJClasses CHANGELOG
 ===================
-Unreleased
-- Added DONE.md to the local-only files listed in CLAUDE.md
-- Documented the Unreleased section in CLAUDE.md's changelog conventions
+v0.55.0    2026-10-18
 - Added .github/dependabot.yml so Dependabot opens one grouped Composer
   update PR a month, with a 7-day cooldown, and turned on vulnerability
   alerts and automatic security fix PRs on GitHub. Consumers ignore
@@ -33,8 +31,7 @@ Unreleased
 - Kept Pushover's "Message Failed" behaviour: donatj/pushover 3 throws
   a ResponseException on failure instead of returning false, so the
   class now catches it
-- Added GJC_AUTH0_COOKIE_SECRET to examples/auth0.php, and updated
-  CLAUDE.md for PHP 8.2 and the new constant
+- Added GJC_AUTH0_COOKIE_SECRET to examples/auth0.php
 
 v0.54.0    2026-10-17
 - Updated the copyright notices in LICENSE and README.md to 2018-2026
