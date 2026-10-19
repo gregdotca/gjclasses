@@ -24,9 +24,9 @@
     "require": {
         "php": ">=8.1",
         "auth0/auth0-php": "~5.0",
-        "donatj/pushover": "^2.0",
+        "donatj/pushover": "^2.0 || ^3.0",
         "irazasyed/telegram-bot-sdk": "^2.0",
         "ivkos/pushbullet": "3.*",
-        "phpmailer/phpmailer": "^6.0"
+        "phpmailer/phpmailer": "^6.0 || ^7.0"
     }
 }
