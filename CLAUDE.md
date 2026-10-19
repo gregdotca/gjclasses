@@ -41,5 +41,6 @@ Per `.data/SETUP.txt`, `Remote.php` has a copy in another project that is kept i
 ## Releases and Changelog
 
 - The changelog is `CHANGELOG` (plain text, no `.md`), newest first, in the form `v0.53.0    2024-08-05` followed by `- ` bullets in past tense. Changes that aren't released yet go under an `Unreleased` heading at the top, which becomes the `v0.N.0    YYYY-MM-DD` heading at the next release.
+- `CHANGELOG` is for people using the library, so it leaves out changes to Claude's own files (`CLAUDE.md`, `CLAUDE.local.md`, `TODO.md`, `DONE.md`, `ARCHIVE.md`, and `.claude/`). Their commit messages describe them instead (Greg's choice, 2026-10-18).
 - Each release bumps the minor version (`v0.N.0`). Usually the code change is one commit, then a separate `Add v0.N.0 to CHANGELOG` commit, with a matching `v0.N.0` git tag (Packagist reads the tags). Tags are GPG-signed annotated tags (`git tag -s -u 87C607E479D40432 -m v0.N.0 v0.N.0`), so GitHub shows them as Verified; commits stay unsigned.
 - Work happens on `dev`; `main` is the main branch. The only remote is `public` (`git@github.com:gregdotca/gjclasses.git`), with both `main` and `dev`.
