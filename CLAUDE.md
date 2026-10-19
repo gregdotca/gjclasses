@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Is
 
-GJClasses is a small PHP (>= 8.1) Composer library (`chetcuti/gjclasses`) of utility classes Greg uses across his own projects: notifications (email and push), logging, currency conversion, Auth0 login, HTTP header checks, pinging, CSV export, and so on. Consumers install it with `composer require chetcuti/gjclasses` and call `new GJClasses\<Class>()`.
+GJClasses is a small PHP (>= 8.2) Composer library (`chetcuti/gjclasses`) of utility classes Greg uses across his own projects: notifications (email and push), logging, currency conversion, Auth0 login, HTTP header checks, pinging, CSV export, and so on. Consumers install it with `composer require chetcuti/gjclasses` and call `new GJClasses\<Class>()`.
 
 There is no build step, test suite, linter, or CI config in the repo. Changes are checked by running the scripts in `examples/` by hand.
 
@@ -24,7 +24,7 @@ The examples need `_includes/config.inc.php` to exist. It's local and git-exclud
 - **Configuration is global constants, not injected.** Classes read `GJC_*` constants that the consuming project must `define()` before using them:
   - `Database` (a PDO singleton via `Database::getInstance()`): `GJC_DB_HOSTNAME`, `GJC_DB_NAME`, `GJC_DB_USERNAME`, `GJC_DB_PASSWORD`.
   - `Mail`: `GJC_USE_SMTP` (`1` sends through `MailSmtp`/PHPMailer, anything else through `MailPhp`/`mail()`), plus the `GJC_SMTP_*` and `GJC_EMAIL_ENCODING_TYPE` constants for `MailSmtp`.
-  - `Auth0`: `GJC_AUTH*` constants.
+  - `Auth0`: `GJC_AUTH0_*` constants, including `GJC_AUTH0_COOKIE_SECRET` (required by auth0-php 8, which encrypts its session cookies with it).
 - **Dispatcher classes route by string:**
   - `Notify` (all work happens in its constructor) sends by `$method` = `all`, `email`, or `push`, using `Mail` and `Push`.
   - `Push` routes by provider name (`join`, `pushbullet`, `pushover`, `telegram`) to the provider class, each with `push()` choosing between `pushNote()` and `pushUrl()` depending on whether a URL was given. Adding a provider means a new class plus a branch in `Push::push()`.

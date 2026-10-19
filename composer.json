@@ -22,11 +22,11 @@
         "platform-check": false
     },
     "require": {
-        "php": ">=8.1",
-        "auth0/auth0-php": "~5.0",
-        "donatj/pushover": "^2.0",
-        "irazasyed/telegram-bot-sdk": "^2.0",
+        "php": ">=8.2",
+        "auth0/auth0-php": "^8.17",
+        "donatj/pushover": "^3.2",
+        "irazasyed/telegram-bot-sdk": "^3.16",
         "ivkos/pushbullet": "3.*",
-        "phpmailer/phpmailer": "^6.0"
+        "phpmailer/phpmailer": "^6.0 || ^7.0"
     }
 }
